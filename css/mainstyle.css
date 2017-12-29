@@ -152,7 +152,7 @@ tr:nth-child(odd):hover td {
 td {
   background:#FFFFFF;
   padding:4px;
-  text-align:left;
+  text-align:center;
   vertical-align:middle;
   font-weight:500;
   font-size:12px;
@@ -191,6 +191,7 @@ td.text-right {
 tfoot tr th {
   border-bottom: 0px;
   border-top: 4px solid #9ea7af;
+  padding: 4px;
 }
 
 tfoot tr th:first-child {
@@ -199,4 +200,12 @@ tfoot tr th:first-child {
  
 tfoot tr th:last-child {
   border-bottom-right-radius:3px;
+}
+
+input[type=number]::-webkit-inner-spin-button, 
+input[type=number]::-webkit-outer-spin-button { 
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    margin: 0; 
 }

@@ -55,8 +55,9 @@ function cTotal() {
     newCell.appendChild(newText);
   }
 
-  var currSum = parseFloat($("#cmtot").html());
-  $("#cmtot").html(tot + currSum);
+  var currSum = round(parseFloat($("#cmtot").html()), 2);
+  var newSum = round(tot+currSum, 2);
+  $("#cmtot").html(newSum);
 
   if (!isMobile()) {
     var selec = document.getElementById("pesoAni");
