@@ -57,7 +57,7 @@
         <h1>Bienvenidos a CVG Palma</h1>
         <p class="lead">Una pagina web de servicios para compra y venta the ganado</p>
         <nav class="cl-effect-21">
-          <a class="js-scroll-trigger" href="#services" href="">Scalas</a>
+          <a class="js-scroll-trigger" href="#services" href="">Escalas</a>
         </nav>
       </div>
     </header>
@@ -71,11 +71,11 @@
             
             <div class="btn-group" data-toggle="buttons">
               <label class="btn btn-primary active" id="bco" onclick="bco()">
-                <input type="radio" autocomplete="off" value="Becerro" name="animales" checked>
-                Becerro <img src="./media/male.png" width="24px" height="24px"></label>
+                <input type="radio" autocomplete="off" value="Macho" name="animales" checked>
+                <img src="./media/gan.png" width="24px" height="24px"> <img src="./media/male.png" width="24px" height="24px"></label>
               <label class="btn btn-primary" id="bca" onclick="bca()">
-                <input type="radio" autocomplete="off" value="Becerra" name="animales">
-                Becerra <img src="./media/female.png" width="24px" height="24px"></label>
+                <input type="radio" autocomplete="off" value="Embra" name="animales">
+                <img src="./media/gan.png" width="24px" height="24px"> <img src="./media/female.png" width="24px" height="24px"></label>
             </div>
 
             <div id="scalaForma" class="btn-group" data-toggle="buttons">
@@ -106,15 +106,15 @@
 
             <form class="form-inline" role="form">
               <div class="form-group">
-                <label for="pesoSca" id="ps">Scala</label>
+                <label for="pesoSca" id="ps"><img src="./media/scala.png" width="24px" height="24px"> <img src="./media/kilo.png" width="24px" height="24px"></label>
                 <input class="form-control" id="pesoSca" value="130">
               </div>
               <div class="form-group">
-                <label for="pesoAni" id="pa">Animal</label>
+                <label for="pesoAni" id="pa"><img src="./media/gan.png" width="24px" height="24px"> <img src="./media/kilo.png" width="24px" height="24px"></label>
                 <input class="form-control" id="pesoAni">
               </div>
               <div class="form-group">
-                <label for="aniPrec" id="ap">Precio</label>
+                <label for="aniPrec" id="ap"><img src="./media/dinero.png" width="24px" height="24px"> </label>
                 <input class="form-control" id="aniPrec">
               </div>
               <button type="button" onclick="cTotal()" value="text" class="btn btn-default" id="calcu">Calcular</button>
@@ -129,17 +129,25 @@
 
               <thead>
                 <tr>
-                  <th class="text-left">Animal</th>
-                  <th class="text-left">Multi</th>
-                  <th class="text-left">Peso [Scala]</th>
-                  <th class="text-left">Peso [Animal]</th>
-                  <th class="text-left">Precio</th>
+                  <th class="text-left"><img src="./media/maleW.png" width="24px" height="24px"> <img src="./media/femaleW.png" width="24px" height="24px"></th>
+                  <th class="text-left"><img src="./media/multW.png" width="24px" height="24px"></th>
+                  <th class="text-left"><img src="./media/scalaW.png" width="24px" height="24px"> <img src="./media/kiloW.png" width="24px" height="24px"></th>
+                  <th class="text-left"><img src="./media/ganW.png" width="24px" height="24px"> <img src="./media/kiloW.png" width="24px" height="24px"></th>
+                  <th class="text-left"><img src="./media/dineroW.png" width="24px" height="24px"></th>
+                  <th class="text-left"><img src="./media/bajo.png" width="24px" height="24px"></th>
                   <th class="text-left">TOTAL</th>
                 </tr>
               </thead>
 
               <tbody class="table-hover">
               </tbody>
+
+              <tfoot>
+                <tr>
+                  <th colspan="6" class="text-right">TOTAL CUMULATIVO</td>
+                  <th class="text-left" id="cmtot">0</td>
+                </tr>
+              </tfoot>
 
             </table>
             

@@ -1,4 +1,4 @@
-@import url(https://fonts.googleapis.com/css?family=Roboto:400,500,700,300,100);
+@import "../fonts/encode-sans/encodesans.css"
 @import "normalize.css";
 @import "animate.min.css";
 @import "scrolling-nav.css";
@@ -75,7 +75,7 @@ div.table-title {
    font-size: 36px;
    font-weight: 400;
    font-style:normal;
-   font-family: "Roboto", helvetica, arial, sans-serif;
+   font-family: "Encode Sans", helvetica, arial, sans-serif;
    text-shadow: -1px -1px 1px rgba(0, 0, 0, 0.1);
    text-transform:uppercase;
 }
@@ -89,15 +89,15 @@ div.table-title {
   border-collapse: collapse;
   height: 320px;
   margin: auto;
-  max-width: 100%;
+  width: 100% !important;
+  max-width: 100% !important;
   padding:5px;
-  width: 100%;
   box-shadow: 0 5px 10px rgba(0, 0, 0, 0.1);
   animation: float 5s infinite;
 }
  
 th {
-  color:#D5DDE5;;
+  color:#fff;
   background:#1b1e24;
   border-bottom:4px solid #9ea7af;
   border-right: 1px solid #343a45;
@@ -148,14 +148,6 @@ tr:nth-child(odd) td {
 tr:nth-child(odd):hover td {
   background:#4E5066;
 }
-
-tr:last-child td:first-child {
-  border-bottom-left-radius:3px;
-}
- 
-tr:last-child td:last-child {
-  border-bottom-right-radius:3px;
-}
  
 td {
   background:#FFFFFF;
@@ -194,4 +186,17 @@ td.text-center {
 
 td.text-right {
   text-align: right;
+}
+
+tfoot tr th {
+  border-bottom: 0px;
+  border-top: 4px solid #9ea7af;
+}
+
+tfoot tr th:first-child {
+  border-bottom-left-radius:3px;
+}
+ 
+tfoot tr th:last-child {
+  border-bottom-right-radius:3px;
 }
