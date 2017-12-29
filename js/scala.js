@@ -38,34 +38,25 @@ function cTotal() {
   var aPrec = $("#aniPrec").val();
   if (isNaN(pSca) || isNaN(pAni) || isNaN(aPrec)) {
     return false;
+  } else {
+    pSca = round(pSca, 2);
+    pAni = round(pAni, 2);
+    aPrec = round(aPrec, 2);
   }
-  var nuevoP = aPrec - ((pAni - pSca) * sca)
-  var tot = pAni * nuevoP;
+  var nuevoP = round(aPrec - ((pAni - pSca) * sca), 2);
+  var tot = round(pAni * nuevoP, 2);
   var arr = [anim, sca, pSca, pAni, aPrec, nuevoP, tot];
 
   var tableRef = document.getElementById("cvgHist").getElementsByTagName("tbody")[0];
   var newRow   = tableRef.insertRow(tableRef.rows.length);
-  var newCell;
   for(i = 0; i < 7; i++) {
-    newCell  = newRow.insertCell(i);
+    var newCell  = newRow.insertCell(i);
     var newText  = document.createTextNode(arr[i]);
     newCell.appendChild(newText);
   }
-  newCell.classList.add("ttl");
 
-  var sum = 0;
-  // iterate through each td based on class and add the values
-
-  $(".ttl").each(function() {
-
-      var value = $(this).text();
-      // add only if the value is number
-      if(!isNaN(value) && value.length != 0) {
-          sum += parseFloat(value);
-      }
-  });
-
-  $("#cmtot").html(sum);
+  var currSum = parseFloat($("#cmtot").html());
+  $("#cmtot").html(tot + currSum);
 
   if (!isMobile()) {
     var selec = document.getElementById("pesoAni");
