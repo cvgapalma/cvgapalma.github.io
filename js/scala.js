@@ -36,14 +36,17 @@ function cTotal() {
   var pSca = $("#pesoSca").val();
   var pAni = $("#pesoAni").val();
   var aPrec = $("#aniPrec").val();
-  if (isNaN(pSca) || isNaN(pAni) || isNaN(aPrec)) {
+  if (isNaN(pSca) || isNaN(pAni) || isNaN(aPrec)
+    || pSca == null || pAni == null || aPrec == null) {
     return false;
   } else {
     pSca = round(pSca, 2);
     pAni = round(pAni, 2);
     aPrec = round(aPrec, 2);
   }
-  var nuevoP = round(aPrec - ((pAni - pSca) * sca), 2);
+  var nuevoP = 0;
+  if (pAni > pSca) nuevoP = round(aPrec - ((pAni - pSca) * sca), 2);
+  else nuevoP = aPrec;
   var tot = round(pAni * nuevoP, 2);
   var arr = [anim, sca, pSca, pAni, aPrec, nuevoP, tot];
 
